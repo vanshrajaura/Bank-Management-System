@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Bank - Advanced Professional Banking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="greeting">Welcome to AK Bank</div>
+    <div id="voiceToggle" onclick="toggleVoice()">Voice: Off</div>
+    <div id="darkModeToggle" onclick="toggleDarkMode()">Dark Mode</div>
+    <div id="menu"></div>
+
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('createAccountModal')">&times;</span>
+            <h2>Create Account</h2>
+            <input type="text" id="name" placeholder="Enter Name" onfocus="speakField('Enter your name')">
+            <input type="number" id="age" placeholder="Enter Age" onfocus="speakField('Enter your age')">
+            <input type="email" id="email" placeholder="Enter Email" onfocus="speakField('Enter your email')">
+            <input type="password" id="pin" placeholder="Set 4-digit PIN" onfocus="speakField('Set your 4 digit PIN')">
+            <button onclick="createAccount()">Create</button>
+        </div>
+    </div>
+
+    <div id="depositModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('depositModal')">&times;</span>
+            <h2>Deposit Money</h2>
+            <input type="text" id="depAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="depPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <input type="number" id="depAmount" placeholder="Enter Amount" onfocus="speakField('Enter amount')">
+            <button onclick="deposit()">Deposit</button>
+        </div>
+    </div>
+
+    <div id="withdrawModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('withdrawModal')">&times;</span>
+            <h2>Withdraw Money</h2>
+            <input type="text" id="wdAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="wdPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <input type="number" id="wdAmount" placeholder="Enter Amount" onfocus="speakField('Enter amount')">
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+    </div>
+
+    <div id="balanceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('balanceModal')">&times;</span>
+            <h2>Balance Enquiry</h2>
+            <input type="text" id="balAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="balPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <button onclick="balanceEnquiry()">Check Balance</button>
+        </div>
+    </div>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('detailsModal')">&times;</span>
+            <h2>Account Details</h2>
+            <input type="text" id="detAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="detPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <button onclick="showDetails()">Show Details</button>
+        </div>
+    </div>
+
+    <div id="transactionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('transactionsModal')">&times;</span>
+            <h2>Transaction History</h2>
+            <input type="text" id="transAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="transPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <button onclick="showTransactions()">Show History</button>
+        </div>
+    </div>
+
+    <div id="changePinModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('changePinModal')">&times;</span>
+            <h2>Change PIN</h2>
+            <input type="text" id="cpAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="cpPin" placeholder="Enter Current PIN" onfocus="speakField('Enter current PIN')">
+            <input type="password" id="newPin" placeholder="Enter New 4-digit PIN" onfocus="speakField('Enter new 4 digit PIN')">
+            <button onclick="changePin()">Change</button>
+        </div>
+    </div>
+
+    <div id="deleteAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('deleteAccountModal')">&times;</span>
+            <h2>Delete Account</h2>
+            <input type="text" id="delAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="delPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <button onclick="deleteAccount()">Delete</button>
+        </div>
+    </div>
+
+    <div id="transferModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('transferModal')">&times;</span>
+            <h2>Transfer Money</h2>
+            <input type="text" id="transfAcc" placeholder="Enter Your Account No" onfocus="speakField('Enter your account number')">
+            <input type="password" id="transfPin" placeholder="Enter Your PIN" onfocus="speakField('Enter your PIN')">
+            <input type="text" id="recAcc" placeholder="Enter Receiver Account No" onfocus="speakField('Enter receiver account number')">
+            <input type="number" id="transfAmount" placeholder="Enter Amount" onfocus="speakField('Enter amount')">
+            <button onclick="transfer()">Transfer</button>
+        </div>
+    </div>
+
+    <div id="loanApplyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loanApplyModal')">&times;</span>
+            <h2>Apply Loan</h2>
+            <input type="text" id="loanAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="loanPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <input type="number" id="loanAmount" placeholder="Enter Loan Amount" onfocus="speakField('Enter loan amount')">
+            <input type="number" id="loanMonths" placeholder="Enter Tenure in Months" onfocus="speakField('Enter tenure in months')">
+            <button onclick="loanApply()">Apply</button>
+        </div>
+    </div>
+
+    <div id="payEmiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('payEmiModal')">&times;</span>
+            <h2>Pay EMI</h2>
+            <input type="text" id="emiAcc" placeholder="Enter Account No" onfocus="speakField('Enter account number')">
+            <input type="password" id="emiPin" placeholder="Enter PIN" onfocus="speakField('Enter PIN')">
+            <button onclick="payEmi()">Pay</button>
+        </div>
+    </div>
+
+    <div id="adminPanelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('adminPanelModal')">&times;</span>
+            <h2>Admin Panel</h2>
+            <input type="text" id="adminUser" placeholder="Enter Admin Username" onfocus="speakField('Enter admin username')">
+            <input type="password" id="adminPass" placeholder="Enter Admin Password" onfocus="speakField('Enter admin password')">
+            <button onclick="adminPanel()">Login</button>
+            <div id="adminSearch">
+                <input type="text" id="adminSearchInput" placeholder="Search by Account Number">
+                <button onclick="searchUser()">Search</button>
+            </div>
+            <div id="notFoundMessage">User Not Found</div>
+            <div id="adminResult"></div>
+        </div>
+    </div>
+
+    <div id="popupModal" class="modal">
+        <div id="popupContent">
+            <div id="popupMessage"></div>
+            <div id="popupButtons"></div>
+        </div>
+    </div>
+
+    <canvas id="confettiCanvas"></canvas>
+    <audio id="transactionSound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <footer>
+        <p>&copy; 2025 AK Bank. All Rights Reserved. | Contact: support@akbank.com</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

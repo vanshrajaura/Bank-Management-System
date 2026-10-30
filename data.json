@@ -1,0 +1,273 @@
+[
+    {
+        "name": "Raj kumar deiv",
+        "age": 45,
+        "E-mail": "www,rajkumari@gmail.com",
+        "Pin": 7894,
+        "account": "79444540",
+        "balance": 1020000,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 1000000,
+                "time": "2025-09-03 06:42:40"
+            },
+            {
+                "type": "Loan credited",
+                "amount": 10000,
+                "time": "2025-09-03 06:43:36"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 2000,
+                "time": "2025-09-03 06:43:52"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 2000,
+                "time": "2025-09-03 06:44:11"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 2000,
+                "time": "2025-09-03 06:44:43"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 2000,
+                "time": "2025-09-03 06:45:00"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 2000,
+                "time": "2025-09-03 06:45:14"
+            },
+            {
+                "type": "Transfer from Avinash Kumar",
+                "amount": 20000,
+                "time": "2025-09-03 07:06:49"
+            }
+        ],
+        "loan": {
+            "amount": 0,
+            "emi": 0
+        }
+    },
+    {
+        "name": "Avinash Kumar",
+        "age": 40,
+        "E-mail": "avinashkumar@gmail.com",
+        "Pin": 4567,
+        "account": "75507632",
+        "balance": 789436213,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 789456213,
+                "time": "2025-09-03 07:06:10"
+            },
+            {
+                "type": "Transfer to Raj kumar deiv",
+                "amount": 20000,
+                "time": "2025-09-03 07:06:49"
+            }
+        ],
+        "loan": {
+            "amount": 0,
+            "emi": 0
+        }
+    },
+    {
+        "name": "Avinash",
+        "age": 78,
+        "E-mail": "kama@2004.com",
+        "Pin": 7852,
+        "account": "95494933",
+        "balance": 123456,
+        "transactions": [
+            {
+                "type": "Transfer from Vikas Yadav",
+                "amount": 123456,
+                "time": "2025-09-10 04:49:30"
+            }
+        ],
+        "loan": {
+            "amount": 0,
+            "emi": 0
+        }
+    },
+    {
+        "name": "Deenanath Yadav",
+        "age": 45,
+        "E-mail": "www.Deenanath123@gmail.com",
+        "Pin": 1802,
+        "account": "46768701",
+        "balance": 314012,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 345012,
+                "time": "2025-09-06 19:39:33"
+            },
+            {
+                "type": "Withdraw",
+                "amount": 30000,
+                "time": "2025-09-06 19:40:10"
+            },
+            {
+                "type": "Withdraw",
+                "amount": 1000,
+                "time": "2025-09-06 19:42:12"
+            }
+        ],
+        "loan": {
+            "amount": 0,
+            "emi": 0
+        }
+    },
+    {
+        "name": "irfan",
+        "age": 21,
+        "E-mail": "irfan@gmial.com",
+        "Pin": 1234,
+        "account": "44332946",
+        "balance": 55000,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 10000,
+                "time": "2025-09-24 07:47:55"
+            },
+            {
+                "type": "Loan credited",
+                "amount": 50000,
+                "time": "2025-09-24 07:49:06"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 5000,
+                "time": "2025-09-24 07:49:30"
+            }
+        ],
+        "loan": {
+            "amount": 45000,
+            "emi": 5000
+        }
+    },
+    {
+        "name": "Radhika",
+        "age": 21,
+        "E-mail": "www.yadavRadha123@gmail.com",
+        "Pin": 8520,
+        "account": "10040525",
+        "balance": 520000,
+        "transactions": [
+            {
+                "type": "Loan credited",
+                "amount": 520000,
+                "time": "2025-09-27 19:02:30"
+            }
+        ],
+        "loan": {
+            "amount": 520000,
+            "emi": 34666.67
+        }
+    },
+    {
+        "name": "shubham",
+        "age": 45,
+        "E-mail": "www.shuabham123@gmail.com",
+        "Pin": 1234,
+        "account": "40182809",
+        "balance": 100500,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 12000,
+                "time": "2025-10-31 05:12:29"
+            },
+            {
+                "type": "Withdraw",
+                "amount": 1500,
+                "time": "2025-10-31 05:13:08"
+            },
+            {
+                "type": "Loan credited",
+                "amount": 100000,
+                "time": "2025-10-31 05:15:05"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 10000,
+                "time": "2025-10-31 05:15:21"
+            }
+        ],
+        "loan": {
+            "amount": 90000,
+            "emi": 10000
+        }
+    },
+    {
+        "name": "Rahul sharma",
+        "age": 21,
+        "E-mail": "www.rahulasharma@gmail.com",
+        "Pin": 7894,
+        "account": "96817812",
+        "balance": 502500,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 500000,
+                "time": "2025-11-18 20:06:32"
+            },
+            {
+                "type": "Transfer from asish",
+                "amount": 2500,
+                "time": "2025-12-05 10:59:21"
+            }
+        ],
+        "loan": {
+            "amount": 0,
+            "emi": 0
+        }
+    },
+    {
+        "name": "asish",
+        "age": 21,
+        "E-mail": "www.ashish123@gmail.com",
+        "Pin": 1230,
+        "account": "65440489",
+        "balance": 492500,
+        "transactions": [
+            {
+                "type": "Deposit",
+                "amount": 10000,
+                "time": "2025-12-05 10:57:43"
+            },
+            {
+                "type": "Deposit",
+                "amount": 10000,
+                "time": "2025-12-05 10:58:10"
+            },
+            {
+                "type": "Transfer to Rahul sharma",
+                "amount": 2500,
+                "time": "2025-12-05 10:59:21"
+            },
+            {
+                "type": "Loan credited",
+                "amount": 500000,
+                "time": "2025-12-05 11:00:16"
+            },
+            {
+                "type": "EMI Payment",
+                "amount": 25000,
+                "time": "2025-12-05 11:00:39"
+            }
+        ],
+        "loan": {
+            "amount": 475000,
+            "emi": 25000
+        }
+    }
+]
